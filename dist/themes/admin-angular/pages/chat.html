@@ -1,0 +1,290 @@
+<!-- Wrapper required for sidebar transitions -->
+<div class="st-container">
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="#sidebar-menu" data-toggle="sidebar-menu" data-effect="st-effect-3" class="toggle pull-left visible-xs"><i class="fa fa-bars"></i></a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a ui-sref="pages.dashboard" class="navbar-brand hidden-xs navbar-brand-primary">Afb Sales</a>
+            </div>
+            <div class="navbar-collapse collapse" id="collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- user -->
+                    <li class="dropdown user">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="images/people/110/guy-6.jpg" alt="" class="img-circle" /> Bill<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#"><i class="fa fa-user"></i>Profile</a></li>
+                            <li><a href="#"><i class="fa fa-wrench"></i>Settings</a> </li>
+                            <li><a ui-sref="pages.login"><i class="fa fa-sign-out"></i>Logout</a></li>
+                        </ul>
+                    </li>
+                    <!-- // END user -->
+                </ul>
+            </div>
+        </div>
+    </div>    
+
+  <!-- sidebar effects OUTSIDE of st-pusher: -->
+  <!-- st-effect-1, st-effect-2, st-effect-4, st-effect-5, st-effect-9, st-effect-10, st-effect-11, st-effect-12, st-effect-13 -->
+
+  <!-- content push wrapper -->
+  <div class="st-pusher">
+
+    <!-- Sidebar component with st-effect-3 (set on the toggle button within the navbar) -->
+    <div class="sidebar left sidebar-size-2 sidebar-offset-0 sidebar-skin-dark sidebar-visible-desktop" id=sidebar-menu data-type=collapse>
+      <div class="split-vertical">
+              <!--<img src="images/afblogo.png" alt="Admin Template" class="img-circle" />-->
+        <div class="split-vertical-body">
+          <div class="split-vertical-cell">
+            <div class="tab-content">
+              <div class="tab-pane active" id="sidebar-tabs-menu">
+                <div data-scrollable>
+                  <ul class="sidebar-menu sm-icons-right sm-icons-block">
+                    <li ui-sref-active="active"><a ui-sref="pages.dashboard"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
+                    <li ui-sref-active="active"><a ui-sref="pages.chat"><i class="fa fa-comments"></i> <span>Login Activity</span></a></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- // END .tab-pane -->
+            </div>
+            <!-- // END .tab-content -->
+
+          </div>
+          <!-- // END .split-vertical-cell -->
+
+        </div>
+        <!-- // END .split-vertical-body -->
+
+        <ul class="sidebar-menu sm-active-item-bg sm-icons-right sm-icons-block">
+          <li><a href="../../../index.html"><i class="fa fa-sign-out"></i> <span>Logout</span></a></li>
+        </ul>
+
+      </div>
+    </div>
+
+    <!-- sidebar effects INSIDE of st-pusher: -->
+    <!-- st-effect-3, st-effect-6, st-effect-7, st-effect-8, st-effect-14 -->
+
+    <!-- this is the wrapper for the content -->
+    <div class="st-content" id="content">
+
+            <!-- extra div for emulating position:fixed of the menu -->
+      <div class="st-content-inner" id="content">
+
+        <div class="container-fluid">
+           <!-- Sidebar component with st-effect-1 (set on the toggle button within the navbar) -->
+  <div class="sidebar sidebar-chat left sidebar-size-2 sidebar-offset-2 chat-skin-white sidebar-visible-desktop" id=sidebar-chat>
+    <div class="split-vertical">
+      <div class="chat-search">
+        <input type="text" class="form-control" placeholder="Search" />
+      </div>
+
+      <ul class="chat-filter nav nav-pills ">
+        <li class="active"><a href="#" data-target="li">All</a></li>
+        <li><a href="#" data-target=".online">Online</a></li>
+        <li><a href="#" data-target=".offline">Offline</a></li>
+        <li><a href="#" data-target=".offline">Blocked</a></li>
+      </ul>
+      <div class="split-vertical-body">
+        <div class="split-vertical-cell">
+          <div data-scrollable>
+            <ul class="chat-contacts">
+              <li class="online" data-user-id="1">
+                <a href="#">
+                  <div class="media">
+                    <div class="pull-left">
+                      <span class="status"></span>
+                      <img src="images/people/110/guy-6.jpg" width="40" class="img-circle" />
+                    </div>
+                    <div class="media-body">
+
+                      <div class="contact-name">Jonathan S.</div>
+                      <small>"Free Today"</small>
+                    </div>
+                  </div>
+                </a>
+              </li>
+
+              <li class="online away" data-user-id="2">
+                <a href="#">
+
+                  <div class="media">
+                    <div class="pull-left">
+                      <span class="status"></span>
+                      <img src="images/people/110/woman-5.jpg" width="40" class="img-circle" />
+                    </div>
+                    <div class="media-body">
+                      <div class="contact-name">Mary A.</div>
+                      <small>"Feeling Groovy"</small>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="online" data-user-id="3">
+                <a href="#">
+                  <div class="media">
+                    <div class="pull-left ">
+                      <span class="status"></span>
+                      <img src="images/people/110/guy-3.jpg" width="40" class="img-circle" />
+                    </div>
+                    <div class="media-body">
+                      <div class="contact-name">Adrian D.</div>
+                      <small>Busy</small>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="offline" data-user-id="4">
+                <a href="#">
+                  <div class="media">
+                    <div class="pull-left">
+                      <img src="images/people/110/woman-6.jpg" width="40" class="img-circle" />
+                    </div>
+                    <div class="media-body">
+                      <div class="contact-name">Michelle S.</div>
+                      <small>Offline</small>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="offline" data-user-id="5">
+                <a href="#">
+                  <div class="media">
+                    <div class="pull-left">
+                      <img src="images/people/110/woman-7.jpg" width="40" class="img-circle" />
+                    </div>
+                    <div class="media-body">
+                      <div class="contact-name">Daniele A.</div>
+                      <small>Offline</small>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="online" data-user-id="6">
+                <a href="#">
+                  <div class="media">
+                    <div class="pull-left">
+                      <span class="status"></span>
+                      <img src="images/people/110/guy-4.jpg" width="40" class="img-circle" />
+                    </div>
+                    <div class="media-body">
+                      <div class="contact-name">Jake F.</div>
+                      <small>Busy</small>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="online away" data-user-id="7">
+                <a href="#">
+                  <div class="media">
+                    <div class="pull-left">
+                      <span class="status"></span>
+                      <img src="images/people/110/woman-6.jpg" width="40" class="img-circle" />
+                    </div>
+                    <div class="media-body">
+                      <div class="contact-name">Jane A.</div>
+                      <small>"Custom Status"</small>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="offline" data-user-id="8">
+                <a href="#">
+                  <div class="media">
+                    <div class="pull-left">
+                      <span class="status"></span>
+                      <img src="images/people/110/woman-8.jpg" width="40" class="img-circle" />
+                    </div>
+                    <div class="media-body">
+                      <div class="contact-name">Sabine J.</div>
+                      <small>"Offline right now"</small>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="online away" data-user-id="9">
+                <a href="#">
+                  <div class="media">
+                    <div class="pull-left">
+                      <span class="status"></span>
+                      <img src="images/people/110/woman-9.jpg" width="40" class="img-circle" />
+                    </div>
+                    <div class="media-body">
+                      <div class="contact-name">Danny B.</div>
+                      <small>Be Right Back</small>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="online" data-user-id="10">
+                <a href="#">
+                  <div class="media">
+                    <div class="pull-left">
+                      <span class="status"></span>
+                      <img src="images/people/110/woman-8.jpg" width="40" class="img-circle" />
+                    </div>
+                    <div class="media-body">
+                      <div class="contact-name">Elise J.</div>
+                      <small>My Status</small>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="online" data-user-id="11">
+                <a href="#">
+                  <div class="media">
+                    <div class="pull-left">
+                      <span class="status"></span>
+                      <img src="images/people/110/guy-3.jpg" width="40" class="img-circle" />
+                    </div>
+                    <div class="media-body">
+                      <div class="contact-name">John J.</div>
+                      <small>My Status #1</small>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+        </div>
+
+      </div>
+      <!-- /st-content-inner -->
+
+    </div>
+    <!-- /st-content -->
+
+  </div>
+  <!-- /st-pusher -->
+
+  <!-- Footer -->
+  <footer class="footer">
+       <strong>Afb Kenya Limited</strong> v1.0.0 &copy; Copyright 2015
+  </footer>
+  <!-- // Footer -->
+
+</div>
+<!-- /st-container -->
+
+<!-- Modal -->
+<div class="modal fade image-gallery-item" id="showImageModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-header">
+      On my way to the top
+    </div>
+    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+    <img class="img-responsive" src="images/place1-full.jpg" alt="Place">
+  </div>
+</div>

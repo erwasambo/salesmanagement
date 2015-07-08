@@ -1,0 +1,244 @@
+<!-- Wrapper required for sidebar transitions -->
+<div class="st-container">
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="#sidebar-menu" data-toggle="sidebar-menu" data-effect="st-effect-3" class="toggle pull-left visible-xs"><i class="fa fa-bars"></i></a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a ui-sref="pages.dashboard" class="navbar-brand hidden-xs navbar-brand-primary">Afb Sales</a>
+            </div>
+            <div class="navbar-collapse collapse" id="collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- user -->
+                    <li class="dropdown user">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="images/people/110/guy-6.jpg" alt="" class="img-circle" /> Bill<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#"><i class="fa fa-user"></i>Profile</a></li>
+                            <li><a href="#"><i class="fa fa-wrench"></i>Settings</a> </li>
+                            <li><a ui-sref="pages.login"><i class="fa fa-sign-out"></i>Logout</a></li>
+                        </ul>
+                    </li>
+                    <!-- // END user -->
+                </ul>
+            </div>
+        </div>
+    </div>    
+
+  <!-- sidebar effects OUTSIDE of st-pusher: -->
+  <!-- st-effect-1, st-effect-2, st-effect-4, st-effect-5, st-effect-9, st-effect-10, st-effect-11, st-effect-12, st-effect-13 -->
+
+  <!-- content push wrapper -->
+  <div class="st-pusher">
+    <!-- sidebar effects INSIDE of st-pusher: -->
+    <!-- st-effect-3, st-effect-6, st-effect-7, st-effect-8, st-effect-14 -->
+
+    <!-- this is the wrapper for the content -->
+    <div class="st-content" id="content">
+
+      <!-- extra div for emulating position:fixed of the menu -->
+      <div class="st-content-inner">
+
+        <div class="container-fluid">
+
+          <h1 class="text-headline page-section-heading">Sales Agents' Statistics</h1>
+          <div class="row" data-toggle="isotope">
+            <div class="item col-md-4 col-sm-6 col-xs-12">
+              <div class="panel panel-default text-center">
+                <div class="panel-body text-center">
+                  <h3 class="text-center text-headline margin-none">
+                    Sales Agents Count
+                  </h3>
+		  <div id="donut-chart" data-toggle="morris-chart-donut" class="height-250"></div>
+                </div>
+
+
+                <div class="panel-footer">
+                  <div class="text-right">
+                    <!--<a href="#" class="btn btn-white">Manage</a>-->
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="item col-md-4 col-sm-6 col-xs-12">
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-xs-6">
+                      <h4 class="text-headline margin-none">291</h4>
+                      <p class="text-light"><i class="fa fa-circle-o text-success fa-fw"></i> Logged in</p>
+                    </div>
+                    <div class="col-xs-6">
+                      <h4 class="text-headline margin-none">17</h4>
+                      <p class="text-light"><i class="fa fa-circle-o text-danger fa-fw"></i> Logged out</p>
+                    </div>
+                  </div>
+
+                  <div class="progress progress-mini">
+                    <div class="progress-bar progress-bar-success" style="width: 85%">
+                      <span class="sr-only">35% Complete (info)</span>
+                    </div>
+                    <div class="progress-bar progress-bar-danger" style="width: 15%">
+                      <span class="sr-only">10% Complete (danger)</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel-footer">
+                  <div class="text-right">
+                    <!--<a href="#" class="btn btn-white">View Activity</a>-->
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+
+            <div class="item col-md-6 col-xs-12">
+              <!-- Notifications -->
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <div class="pull-right ">
+                    <a href="#" class="btn btn-default btn-xs"><i class="fa fa-cog"></i></a>
+                  </div>
+                  <h4 class="panel-title">Notifications</h4>
+                </div>
+                <ul class="notifications-timeline">
+                  <li>
+                    <span class="date">24 Aug</span>
+                    <span class="circle orange"></span>
+                    <span class="content"><a href="#">Jonathan</a> has logged out</span>
+                  </li>
+                  <li>
+                    <span class="date">13 Aug</span>
+                    <span class="circle blue"></span>
+                    <span class="content"><a href="#">Michelle</a> has logged out.</span>
+                  </li>
+                  <li>
+                    <span class="date">10 Aug</span>
+                    <span class="circle gray-light"></span>
+                    <span class="content"><a href="#">Jonathan</a>has logged in.</span>
+                  </li>
+                </ul>
+              </div>
+              <!-- // Notifications -->
+            </div>
+
+          </div>
+
+          <h2 class="page-section-heading">Sales Agents Login Activity</h2>
+          <div class="row" data-toggle="isotope">
+            <div class="item col-md-6 col-sm-6 col-xs-12">
+              <!-- Leaderboard -->
+              <div class="panel panel-default">
+                <div class="panel-heading">
+		  <button class="btn btn-success btn-stroke">Logged In</button>
+                </div>
+                <table class="table table-leaderboard margin-none">
+                  <tbody>
+                    <tr>
+                      <td width="20">1</td>
+                      <td><a href="#">Jonathan Smith</a></td>
+                      <td><span class="pull-right"><button class="btn btn-danger"><i class="fa fa-times"></i> Force Logout</button></span></td>
+                    </tr>
+                    <tr>
+                      <td width="20">2</td>
+                      <td><a href="#">Michelle S.</a></td>
+                      <td><span class="pull-right"><button class="btn btn-danger"><i class="fa fa-times"></i> Force Logout</button></span></td>
+                    </tr>
+                    <tr>
+                      <td width="20">3</td>
+                      <td><a href="#">Anthony Smith</a></td>
+                      <td><span class="pull-right"><button class="btn btn-danger"><i class="fa fa-times"></i> Force Logout</button></span></td>
+                    </tr>
+                    <tr>
+                      <td width="20">4</td>
+                      <td><a href="#">First Smith</a></td>
+                      <td><span class="pull-right"><button class="btn btn-danger"><i class="fa fa-times"></i> Force Logout</button></span></td>
+                    </tr>
+                    <tr>
+                      <td width="20">5</td>
+                      <td><a href="#">Second Smith</a></td>
+                      <td><span class="pull-right"><button class="btn btn-danger"><i class="fa fa-times"></i> Force Logout</button></span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- // Leaderboard -->
+            </div>
+            <div class="item col-md-6 col-sm-6 col-xs-12">
+              <!-- Leaderboard -->
+              <div class="panel panel-default">
+                <div class="panel-heading">
+			<button class="btn btn-primary btn-stroke">Logged Out</button>
+                </div>
+                <table class="table table-leaderboard margin-none">
+                  <tbody>
+                    <tr>
+                      <td width="20">1</td>
+                      <td><a href="#">Jonathan Smith</a></td>
+                      <td><span class="pull-right">591</span></td>
+                    </tr>
+                    <tr>
+                      <td width="20">2</td>
+                      <td><a href="#">Michelle S.</a></td>
+                      <td><span class="pull-right">491</span></td>
+                    </tr>
+                    <tr>
+                      <td width="20">3</td>
+                      <td><a href="#">Anthony Smith</a></td>
+                      <td><span class="pull-right">332</span></td>
+                    </tr>
+                    <tr>
+                      <td width="20">4</td>
+                      <td><a href="#">First Smith</a></td>
+                      <td><span class="pull-right">202</span></td>
+                    </tr>
+                    <tr>
+                      <td width="20">5</td>
+                      <td><a href="#">Second Smith</a></td>
+                      <td><span class="pull-right">14</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- // Leaderboard -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- /st-content-inner -->
+
+    </div>
+    <!-- /st-content -->
+
+  </div>
+  <!-- /st-pusher -->
+
+  <!-- Footer -->
+  <footer class="footer">
+       <strong>Afb Kenya Limited</strong> v1.0.0 &copy; Copyright 2015
+  </footer>
+  <!-- // Footer -->
+
+</div>
+<!-- /st-container -->
+
+<!-- Modal -->
+<div class="modal fade image-gallery-item" id="showImageModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-header">
+      On my way to the top
+    </div>
+    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+    <img class="img-responsive" src="images/place1-full.jpg" alt="Place">
+  </div>
+</div>
