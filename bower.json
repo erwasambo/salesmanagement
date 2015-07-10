@@ -1,9 +1,6 @@
 {
 	"name": "ThemeKit",
 	"version": "4.0.0",
-	"authors": [
-		"Mosaicpro <contact@mosaicpro.biz> (http://mosaicpro.biz)"
-	],
 	"license": "http://themeforest.net/licenses",
 	"private": true,
 	"dependencies": {
@@ -27,13 +24,10 @@
 		"highlightjs": "~8.3.0",
 		"flot": "~0.8.3",
 		"jquery.easy-pie-chart": "~2.1.4",
-		"jvectormap": "~2.0.0",
 		"flot-orderBars": "https://github.com/emmerich/flot-orderBars.git",
 		"bootstrap-switch": "~3.3.1",
 		"material-design-iconic-font": "~1.1.1",
 		"jquery-ui-map": "~3.0.0",
-		"gmaps-markerclusterer-plus": "~2.1.1",
-		"gmaps-infobox": "svn+http://google-maps-utility-library-v3.googlecode.com/svn#infobox",
 		"jplayer": "~2.9.2",
 		"fancytree": "~2.6.0",
 		"jquery.hotkeys": "https://github.com/jeresig/jquery.hotkeys.git#0.2.0",
@@ -55,7 +49,10 @@
 		"owl.carousel": "*",
 		"slick.js": "~1.3.15",
 		"load_image": "https://github.com/mixonic/load_image.git",
-		"bootstrap-datepicker": "~1.3.1"
+		"bootstrap-datepicker": "~1.3.1",
+		    "firebase": "2.2.2",
+		    "angularfire": "~1.0.0",
+		    "mockfirebase": "~0.10.3"
 	},
 	"resolutions": {
 		"bootstrap": "3.3.4"
